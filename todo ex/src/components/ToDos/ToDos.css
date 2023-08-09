@@ -1,0 +1,113 @@
+.loading_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+  }
+  
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .todos_container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    background: linear-gradient(135deg, #f06, #fc0);
+  }
+  
+  .todos_top {
+    display: flex;
+    margin-left: 2px;
+    margin-right: 2px;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid;
+  }
+  
+  .add_todo_button {
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #f06, #fc0);
+    border-radius: 7px;
+  }
+  
+  .search_container {
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    left: 1111px;
+    align-items: right;
+  }
+  
+  .search_input {
+    margin-right: 1rem;
+    padding: 5px;
+    border:4px solid black;
+    margin: 12px;
+  }
+  
+ 
+
+  .search_button {
+    
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: transparent; /* Set the background color to transparent */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex; /* Add flex display to center the icon and text */
+    align-items: center; /* Align items vertically in the center */
+  
+}
+
+.search_button i.fa.fa-search{
+  position: relative;
+  right: -13px;
+  top: 13px;
+  font-size: 34px; /* Adjust the icon size as needed */
+    margin-right: 8px; /* Add some space between the icon and text */
+    color: black
+
+}
+.search_button:hover i.fa.fa-search{
+  transform: scale(0.8);
+
+}
+  
+  .todos_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+  }
+  
+  
+  .filter_container {
+    margin-left: auto;
+  }
+  
+  .filter_select {
+    padding: 3px;
+    border: 4px solid black;
+    position: relative;
+    right: 355px;
+    border-radius: 21px;
+  }
+
+  .fa fa-plus{
+    font-size:100px;
+    color:red;
+
+  }
+
+
+
+
+
+  
