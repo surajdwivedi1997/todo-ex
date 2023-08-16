@@ -10,16 +10,17 @@
     align-items: center;
     justify-content: center;
     margin: 10% 5%;
-    max-width: 400px;
+    width: 490px;
+    height: 400px;
     padding: 20px 30px;
     background: linear-gradient(135deg, #f06, #fc0);
    
-    border: 5px solid black;
+    
     border-radius: 10px;
   }
   
   .heading {
-    color: rgb(56, 56, 56);
+    color: black;
   }
   
   .input {
@@ -51,8 +52,8 @@
   .button {
     padding: 10px 20px;
     margin-bottom: 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: #000;
     border: none;
     border-radius: 4px;
     font-size: 16px;

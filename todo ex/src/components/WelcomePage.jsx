@@ -8,7 +8,7 @@ export default function WelcomePage() {
     <>
       <div className="main_container">
         <div className="welcome_container">
-          <div className="welcome_heading"> TODO LIST</div>
+          <div className="welcome_heading"> TODO LIST (making easy)</div>
           <div className="welcome_buttons">
             <Link to="/login" >
              <button  className="button-64">LOGIN</button> 

@@ -29,8 +29,8 @@
   
   .login_form button {
     padding: 10px 25px;
-    background-color: black;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: #000;
     border: none;
     border-radius: 7px;
     cursor: pointer;

@@ -54,8 +54,8 @@
   font-weight: bolder;
   border: none;
   border-radius: 10px;
-  background-color: #ae8412;
-  color: #151414;
+  background-color: rgba(0, 0, 0, 0.26);
+    color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

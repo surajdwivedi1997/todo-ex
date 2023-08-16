@@ -1,24 +1,31 @@
-import PropTypes from "prop-types";
+// Import necessary modules and styles
+
 import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ToDoDetails.css";
 import loader from "../../assets/loader.gif";
-
+// Define the ToDoDetails component
 export default function ToDoDetails() {
+  // Create a ref to track whether the component has been rendered before
   const rendered = useRef(false);
+  // Get the todoId from URL parameters
   const params = useParams();
   const todoId = params.id;
   console.log(todoId);
+  // Get the navigation function from react-router-dom
   const navigate = useNavigate();
+  // Get the tokenId from local storage
   const tokenId = localStorage.getItem("tokenId");
+  // Initialize state for loading
   const [loading, setLoading] = useState(true);
+  // Initialize state for todo details
 
   const [todo, setTodo] = useState({
     todoheading: "",
     tododescription: "",
     todostatus: "",
   });
-
+  // useEffect to fetch todo details
   useEffect(() => {
     const getTodoDetails = async (tokenId) => {
       const response = await fetch(
@@ -29,8 +36,6 @@ export default function ToDoDetails() {
             Authorization: "Bearer " + tokenId,
             "Cache-Control": "no-cache",
             Accept: "*/*",
-            "Accept-Encoding": "gzip, deflate, br",
-            Connection: "keep-alive",
           },
         }
       );
@@ -52,7 +57,7 @@ export default function ToDoDetails() {
       rendered.current = true;
     };
   }, [todoId, tokenId]);
-
+  // If still loading, display a loader
   if (loading) {
     return (
       <div className="loading_container">
@@ -60,14 +65,14 @@ export default function ToDoDetails() {
       </div>
     );
   }
-
+  // Function to handle editing the todo
   const handleEdit = () => {
     localStorage.setItem("heading", todo.todoheading);
     localStorage.setItem("description", todo.tododescription);
     localStorage.setItem("status", todo.todostatus);
     navigate(`/todo/edit/${todoId}`);
   };
-
+  // Function to handle deleting the todo
   const handleDelete = async () => {
     try {
       const response = await fetch(
@@ -76,7 +81,9 @@ export default function ToDoDetails() {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + tokenId,
-           
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            Connection: "keep-alive",
           },
         }
       );
@@ -90,16 +97,16 @@ export default function ToDoDetails() {
       console.error("Error deleting todo:", error);
     }
   };
-
+  // Function to handle navigating back
   const handleBack = () => {
     navigate("/todos");
   };
-
+  // Render the component
   return (
     <>
       <div className="main">
         <div className="todo_details">
-          <h1>Todo Details</h1>
+          <h1>TODO DETAILS</h1>
           <h2>{todo.todoheading}</h2>
           <p>{todo.tododescription}</p>
           <p className="status">
@@ -110,14 +117,14 @@ export default function ToDoDetails() {
           <br />
 
           <div className="button_group">
-            <button onClick={handleEdit} className="edit"><i className="fa fa-edit" ></i>
-             
+            <button onClick={handleEdit} className="edit">
+              <i className="fa fa-edit"></i>
             </button>
-            <button onClick={handleDelete} className="delete"><i class="fa fa-trash-o" ></i>
-            
+            <button onClick={handleDelete} className="delete">
+              <i class="fa fa-trash-o"></i>
             </button>
-            <button onClick={handleBack} className="back"><i class="fa fa-arrow-circle-o-left" ></i>
-             
+            <button onClick={handleBack} className="back">
+              <i class="fa fa-arrow-circle-o-left"></i>
             </button>
           </div>
         </div>
@@ -125,10 +132,3 @@ export default function ToDoDetails() {
     </>
   );
 }
-
-ToDoDetails.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  status: PropTypes.bool,
-};

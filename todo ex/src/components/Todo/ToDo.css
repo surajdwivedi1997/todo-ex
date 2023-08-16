@@ -1,70 +1,64 @@
 .todo_card {
   background: linear-gradient(135deg, #f06, #fc0);
-    border: 5px solid #0f0f0f;
+  border: 5px solid #0f0f0f;
+  border-radius: 2px;
+  margin: 5%;
+  padding: 0px 25px 30px 25px;
+
+  max-width: 600px;
+}
+
+.todo_card_title {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.title_link {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+
+.todo_card_description {
+  margin-bottom: 5px;
+}
+
+.todo_card_status {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .todo_card {
+    background-color: #465db6;
+    border: 1px solid #ccc;
     border-radius: 2px;
     margin: 5%;
     padding: 0px 25px 30px 25px;
-   
     max-width: 600px;
   }
-  
-  .todo_card_title {
-    font-size: 24px;
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
-  
-  .title_link {
-    text-decoration: none;
-    color: rgb(36, 36, 36);
-  }
-  
-  .todo_card_description {
-    margin-bottom: 5px;
-  }
-  
-  .todo_card_status {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+}
 
-  
-  /* .todo_card_id {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 5px;
-  } */
-  
- 
-  
-  
-  
-  
-  @media (max-width: 768px) {
-    .todo_card {
-      background-color: #465db6;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      margin: 5%;
-      padding: 0px 25px 30px 25px;
-      max-width: 600px;
-    }
-  }
+.title_link {
+  text-decoration: none; /* Remove default underline */
+  color: #323030; /* Set default text color */
+  transition: color 0.3s; /* Add a smooth transition effect to color changes */
+}
 
-  .title_link {
-    text-decoration: none; /* Remove default underline */
-    color: #323030; /* Set default text color */
-    transition: color 0.3s; /* Add a smooth transition effect to color changes */
-  }
-  
-  .title_link:hover {
-    color: #060a26; /* Change the text color on hover */
-  }
-  .title_link:hover .todo_card {
-    transform: translateX(5px); /* Move the element 10 pixels to the right on hover */
-  }
-  .todo_card {
-    transition: transform 0.3s;
-    background: linear-gradient(135deg, #f06, #fc0); /* Gradient background color */
-    padding: 10px; /* Adding some padding for better visibility of the gradient */
-  }
+.title_link:hover {
+  color: #b2dc0b; /* Change the text color on hover */
+}
+.title_link:hover .todo_card {
+  transform: translateX(
+    5px
+  ); /* Move the element 10 pixels to the right on hover */
+}
+.todo_card {
+  transition: transform 0.3s;
+  background: linear-gradient(
+    135deg,
+    #f06,
+    #fc0
+  ); /* Gradient background color */
+  padding: 10px; /* Adding some padding for better visibility of the gradient */
+}
