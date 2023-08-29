@@ -16,7 +16,7 @@ const Login = () => {
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-// Create an object with user data from form inputs
+    // Create an object with user data from form inputs
     const userData = {
       email,
       password,
@@ -40,19 +40,17 @@ const Login = () => {
         }
       );
 
- 
       if (response.ok) {
-         
-       // If the response is successful, parse the JSON response dat
+        // If the response is successful, parse the JSON response dat
         const data = await response.json();
         if ("token" in data.data) {
-           // If the "token" key exists in the response, it means successful login
-          localStorage.setItem("tokenId", data.data.token);// Set the user's token
-          localStorage.setItem("username", data.data.name);// Set the user's name
+          // If the "token" key exists in the response, it means successful login
+          localStorage.setItem("tokenId", data.data.token); // Set the user's token
+          localStorage.setItem("username", data.data.name); // Set the user's name
           console.log("User's Email => ", data.data.email);
           console.log("User's token => ", data.data.token);
-          setName(data.data.name);// Set the user's name
-          setError("");// Clear any previous error messages
+          setName(data.data.name); // Set the user's name
+          setError(""); // Clear any previous error messages
         } else {
           console.log("Error!");
           setError("Invalid credentials. Please try again.");
@@ -62,14 +60,14 @@ const Login = () => {
         // If the response is not successful, parse the JSON error data
         const errorData = await response.json();
         console.error("Login failed:", errorData);
-        setError("An error occurred. Please try again.");
+        setError("Incorrect Username or Password");
       }
     } catch (error) {
       console.error("An error occurred:", error);
       setError("An error occurred. Please try again.");
     }
   };
-// JSX code for the login form UI
+  // JSX code for the login form UI
   return (
     <>
       <div className="main_container">
@@ -91,14 +89,7 @@ const Login = () => {
           <button type="submit">LOGIN</button>
           <div className="signup_message">
             Don&apos;t have an account?&nbsp;&nbsp;
-            <Link
-              to="/signup"
-              style={{
-                marginBottom: "20px",
-                textDecoration: "none",
-                color: "blueviolet",
-              }}
-            >
+            <Link className="link_Signup" to="/signup">
               SignUp
             </Link>
           </div>

@@ -1,15 +1,8 @@
-
 // Import necessary modules and styles
-import { Link,} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ToDo.css";
 // Define the ToDo component
 export default function ToDo({ id, name, description, status }) {
-
-
-
-
- 
-
   // Render the component
   return (
     <>
@@ -23,10 +16,7 @@ export default function ToDo({ id, name, description, status }) {
             Status - {!status ? "NOT completed" : "Completed"}
           </p>
         </div>
-        
       </Link>
     </>
   );
 }
-
-

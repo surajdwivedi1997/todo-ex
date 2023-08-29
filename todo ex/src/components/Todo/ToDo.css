@@ -1,5 +1,5 @@
 .todo_card {
-  background: linear-gradient(135deg, #f06, #fc0);
+  background: linear-gradient(150deg, rgb(55, 52, 53), rgb(132, 122, 83));
   border: 5px solid #0f0f0f;
   border-radius: 2px;
   margin: 5%;
@@ -12,6 +12,7 @@
   font-size: 24px;
   margin-bottom: 5px;
   font-weight: 600;
+  color: black;
 }
 
 .title_link {
@@ -30,8 +31,7 @@
 
 @media (max-width: 768px) {
   .todo_card {
-    background-color: #465db6;
-    border: 1px solid #ccc;
+    
     border-radius: 2px;
     margin: 5%;
     padding: 0px 25px 30px 25px;
@@ -41,7 +41,7 @@
 
 .title_link {
   text-decoration: none; /* Remove default underline */
-  color: #323030; /* Set default text color */
+  color: black; /* Set default text color */
   transition: color 0.3s; /* Add a smooth transition effect to color changes */
 }
 
@@ -55,10 +55,7 @@
 }
 .todo_card {
   transition: transform 0.3s;
-  background: linear-gradient(
-    135deg,
-    #f06,
-    #fc0
-  ); /* Gradient background color */
+  background: linear-gradient(150deg, rgb(55, 52, 53), rgb(132, 122, 83));
+  /* Gradient background color */
   padding: 10px; /* Adding some padding for better visibility of the gradient */
 }

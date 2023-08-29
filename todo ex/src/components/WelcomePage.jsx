@@ -2,7 +2,6 @@ import "./WelcomePage.css";
 
 import { Link } from "react-router-dom";
 
-
 export default function WelcomePage() {
   return (
     <>
@@ -10,15 +9,13 @@ export default function WelcomePage() {
         <div className="welcome_container">
           <div className="welcome_heading"> TODO LIST (making easy)</div>
           <div className="welcome_buttons">
-            <Link to="/login" >
-             <button  className="button-64">LOGIN</button> 
-        
+            <Link to="/login">
+              <button className="button-64">LOGIN</button>
             </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/signup" >
-            <button  className="button-64">SIGN UP</button> 
+            <Link to="/signup">
+              <button className="button-64">SIGN UP</button>
             </Link>
-            
           </div>
         </div>
       </div>

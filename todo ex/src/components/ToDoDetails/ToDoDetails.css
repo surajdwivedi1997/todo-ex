@@ -12,13 +12,14 @@
 
 .todo_details {
   padding: 20px 40px;
-  background: linear-gradient(135deg, #f06, #fc0);
+  background: linear-gradient(150deg, rgb(55, 52, 53), rgb(132, 122, 83));
   backdrop-filter: blur(100%);
   border-radius: 7px;
-  width: 50%;
-    height: 40%;
+  margin-bottom: 1rem;
+  margin-top: 160px;
+  width: 45%;
+  height: 45%;
 }
-
 
 .todo_details h2 {
   font-size: 28px;

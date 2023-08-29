@@ -9,17 +9,17 @@ export default function ToDos() {
   // State to hold todos and loading status
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(true);
-   // State for search text and filter
+  // State for search text and filter
   const [searchText, setSearchText] = useState("");
   const [filter, setFilter] = useState("Select");
   // Get the tokenId from local storage
   const tokenId = localStorage.getItem("tokenId");
-  
+
   // Get the navigation function from react-router-dom
   const navigate = useNavigate();
   // State for storing the username
   const [username, setUsername] = useState("");
-  
+
   // Effect to retrieve and set the username from local storage
   useEffect(() => {
     console.log("Before username retrieval");
@@ -27,25 +27,21 @@ export default function ToDos() {
     console.log("Retrieved username:", username);
     setUsername(username);
   }, []);
-  
-// Effect to redirect to login if no tokenId is available
+
+  // Effect to redirect to login if no tokenId is available
   useEffect(() => {
     if (!tokenId) {
       navigate("/login");
     }
   }, [navigate, tokenId]);
 
-
-  
-
   const handleLogout = () => {
     localStorage.removeItem("tokenId");
- 
+
     localStorage.removeItem("username");
     navigate("/login");
-
   };
-// Effect to fetch all todos
+  // Effect to fetch all todos
   useEffect(() => {
     async function getAllTodos(tokenId) {
       const response = await fetch(
@@ -68,7 +64,7 @@ export default function ToDos() {
 
     getAllTodos(tokenId);
   }, [tokenId]);
-// Function to search todos based on searchText
+  // Function to search todos based on searchText
   const searchTodos = async () => {
     const response = await fetch(
       `https://todos-api-aeaf.onrender.com/api/v1/todo/getAll?search=${searchText}`,
@@ -83,15 +79,15 @@ export default function ToDos() {
     const data = await response.json();
     setTodos(data);
   };
-// Function to handle search input change
+  // Function to handle search input change
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
   };
-// Function to handle filter selection change
+  // Function to handle filter selection change
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
-// Function to filter todos based on selected filter
+  // Function to filter todos based on selected filter
   const filterTodos = () => {
     switch (filter) {
       case "active":
@@ -110,7 +106,7 @@ export default function ToDos() {
       </div>
     );
   }
- // Render the component
+  // Render the component
   return (
     <>
       <div className="todos_container">
@@ -121,8 +117,8 @@ export default function ToDos() {
           <div className="welcome">
             Welcome <strong>{username}</strong> &#128522;
           </div>
-          <button onClick={handleLogout} className="logout_button">
-            <i class="fa fa-sign-out"></i>
+          <button onClick={handleLogout}  className="logout_button">
+            <i className="fa fa-sign-out"></i>
           </button>
 
           <div className="search_container">
@@ -134,7 +130,7 @@ export default function ToDos() {
               className="search_input"
             />
             <button onClick={searchTodos} className="search_button">
-              <i class="fa fa-search"></i>
+              <i className="fa fa-search"></i>
             </button>
           </div>
           <div className="filter_container">
@@ -143,9 +139,7 @@ export default function ToDos() {
               onChange={handleFilterChange}
               className="filter_select"
             >
-              <option value="select">
-                <strong>Select</strong>
-              </option>
+              <option value="select">Select</option>
               <option value="all">All</option>
               <option value="active">Active</option>
               <option value="completed">Completed</option>

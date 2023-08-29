@@ -1,64 +1,74 @@
 .main_container {
-    display: flex;
-    justify-content: center;
-    height:100vh;
-    background-color: #edd328;
-    /* margin-top: 10%; */
-  }
-  
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 160px;
+  border: 4px solid black;
+  background: linear-gradient(150deg, rgb(55, 52, 53), rgb(132, 122, 83));
+  padding: 30px;
+  width: 45%;
+  height: 45%;
+  gap: 10px;
+  border-radius: 7px;
+}
+
+.login_form input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border-radius: 7px;
+  border: 2px solid black;
+}
+
+.login_form button {
+  padding: 10px 25px;
+  background-color: rgba(0, 0, 0, 0.26);
+  color: #000;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login_form button:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.signup_message {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.error_message {
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
   .login_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #f06, #fc0);
-    padding: 30px;
-    width: 100%;
-    height:100vh;
-    gap: 10px;
-    border-radius: 7px;
+    margin-top: 20%;
+    width: 65%;
   }
-  
   .login_form input {
-    width: 60%;
-    padding: 10px;
-    margin-bottom: 0.5rem;
-    border-radius: 7px;
-    border: 1px solid #ccc;
+    width: 100%;
   }
-  
-  .login_form button {
-    padding: 10px 25px;
-    background-color: rgba(0, 0, 0, 0.26);
-    color: #000;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .login_form button:hover {
-    background-color: rgb(36, 36, 36);
-  }
-  
-  .signup_message {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .error_message {
-    color: red;
-    margin-top: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .login_form {
-      margin-top: 20%;
-      width: 65%;
-    }
-    .login_form input {
-      width: 100%;
-    }
-  }
-  
+}
+.welcome-todo {
+  font-size: 20px;
+  text-align: center;
+}
+
+.link_Signup {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

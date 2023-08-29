@@ -1,65 +1,65 @@
-.main_container{
-    display: flex;
-    background: linear-gradient(135deg, #f06, #fc0);
-   height: 100vh;
-  }
-  
-  .edit_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10% 5%;
-    width: 490px;
-    height: 400px;
-    padding: 20px 30px;
-    background: linear-gradient(135deg, #f06, #fc0);
-   
-    
-    border-radius: 10px;
-  }
-  
-  .heading {
-    color: black;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border-radius: 7px;
-  }
-  
-  .checkboxLabel {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
-  
-  .checkbox {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.26);
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
+.main_container {
+  display: flex;
+  background: linear-gradient(135deg, rgb(55, 52, 53), rgb(132, 122, 83));
+  height: 100vh;
+}
+
+.edit_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 160px;
+  width: 45%;
+  height: 45%;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, rgb(55, 52, 53), rgb(132, 122, 83));
+
+  border-radius: 10px;
+}
+
+.heading {
+  color: black;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.checkbox {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.26);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

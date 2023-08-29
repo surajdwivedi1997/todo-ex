@@ -12,7 +12,7 @@ export default function CreateTodo() {
     description: "",
     status: false,
   });
-  
+
   // Get the tokenId from local storage
   const tokenId = localStorage.getItem("tokenId");
   // Get the navigation function from react-router-dom
